@@ -75,11 +75,13 @@ namespace BoVoyage.DAL
             {
                 contenuFichier.AppendLine(string.Join(
                                             SeparateurChamps.ToString(),
+                                            contact.Civilite,
                                             contact.Nom,
                                             contact.Prenom,
                                             contact.Email,
                                             contact.Telephone,
-                                            contact.DateNaissance));
+                                            contact.DateNaissance,
+                                            contact.Addresse ));
             }
 
             File.WriteAllText(CheminFichier, contenuFichier.ToString());

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace BoVoyage.DAL
 {
-    public class DonneesContact : IDonneesContact
+    public class OutilsGession : IOutilsgesstion
     {
-        const string CheminFichier = @"C:\Temp\Contacts.txt";
+        const string CheminFichier = @"C:\Temp.txt";
         const char SeparateurChamps = ';';
 
         private List<Contact> contacts;
@@ -83,6 +83,19 @@ namespace BoVoyage.DAL
             }
 
             File.WriteAllText(CheminFichier, contenuFichier.ToString());
+        }
+        public void SuiviPayerDossier()
+        {
+
+        }
+        public void ListerReservation()
+        {
+
+        }
+        
+        public void SupprimerOffre()
+        {
+
         }
     }
 }

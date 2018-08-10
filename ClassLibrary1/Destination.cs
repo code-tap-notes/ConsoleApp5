@@ -8,8 +8,11 @@ namespace BoVoyage.DAL
 {
     public class Destination
     {
+        private string Pays;
         public string Continent { get; set; }
-        public string Pays { get; set; }
-        public string Region { get; set; }
+        public string _Pays {
+            get;
+            set; }
+        public string Region { get; set; }     
     }
 }

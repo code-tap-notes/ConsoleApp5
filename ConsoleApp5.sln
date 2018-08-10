@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleVoyage", "ConsoleApp5\ConsoleVoyage.csproj", "{AF8A8DBD-C99B-480D-AB65-F7AA418048CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoVoyage", "ConsoleApp5\BoVoyage.csproj", "{AF8A8DBD-C99B-480D-AB65-F7AA418048CA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BoVoyage.DAL", "ClassLibrary1\BoVoyage.DAL.csproj", "{7B368F11-1A7F-46B1-A15C-42995C5FE2EA}"
 EndProject

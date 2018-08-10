@@ -8,15 +8,32 @@ namespace BoVoyage.DAL
 {
     public class OffreAgenceVoyage
     { 
-        public int NombreVoyageurMax { get; set; }
-        public string DescriptionDuVoyage { get; set; }
-        public double PrixPersonne { get; set; }
-        public DateTime DateDebut { get; set; }
-        public DateTime DateRetour { get; set; }
-        public string NumeroSequentiel{ get; set; }
-      
-      
-    }
-    
+        
+            public string Destination { get; set; }
+            public double Prix { get; set; }
+            public DateTime DateAller { get; set; }
+            public DateTime DateRetour { get; set; }
+
+
+            public OffreAgenceVoyage()
+            {
+
+            }
+            public OffreAgenceVoyage(string _destination, double _prix, DateTime _datealler, DateTime _dateretour)
+            {
+                Destination = _destination;
+                Prix = _prix;
+                DateAller = _datealler;
+                DateRetour = _dateretour;
+
+            }
+            public override string ToString()
+            {
+                return Destination + " " + Prix + " " + DateAller + " " + DateRetour;
+            }
+
+     }
+
 
 }
+

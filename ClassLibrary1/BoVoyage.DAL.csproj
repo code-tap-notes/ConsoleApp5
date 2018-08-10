@@ -41,16 +41,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CampagneComercial.cs" />
+    <Compile Include="IOutilsgesstion.cs" />
     <Compile Include="IDonneesContact.cs" />
     <Compile Include="DonneesContact.cs" />
-    <Compile Include="OutilsGessionClient.cs" />
+    <Compile Include="OutilsGession.cs" />
     <Compile Include="OutilsConsole.cs" />
     <Compile Include="OffreBoVoyage.cs" />
     <Compile Include="UserLogin.cs" />
     <Compile Include="Participant.cs" />
     <Compile Include="Reservation.cs" />
     <Compile Include="Destination.cs" />
-    <Compile Include="FicherStocker.cs" />
     <Compile Include="OffreAgenceVoyage.cs" />
     <Compile Include="Contact.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

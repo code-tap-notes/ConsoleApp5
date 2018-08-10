@@ -8,76 +8,139 @@ namespace BoVoyage
 {
     class Program
     {
-        static IServiceContact service = new ServiceContact();
-        static List<Contact>  Contacts;
-         static void Main(string[] args)
+        static List<OffreAgenceVoyage> offreA = new List<OffreAgenceVoyage>();
+        static List<OffreBoVoyage> offreB = new List<OffreBoVoyage>();
+        Destination destination = new Destination();
+        
+        static void ListeOffres()
         {
-            Console.WriteLine("Gession Client");
-           
-            bool continuer = true;
-            while (continuer)
+            OutilsConsole.AfficherChamp("DESTINATION", 10);
+            OutilsConsole.AfficherChamp("DATE DEBUT", 10);
+            OutilsConsole.AfficherChamp("DATE RETOUR", 20);   
+            Console.WriteLine();
+            Console.WriteLine(new string('-', 75));
+            Console.Clear();
+            Console.WriteLine("Liste des offres\n");
+            OffreAgenceVoyage voyage1 = new OffreAgenceVoyage("Barcelone", 123, new DateTime(2018, 08, 20, 08, 45, 00), new DateTime(2018, 08, 26, 08, 15, 00));
+            OffreAgenceVoyage voyage2 = new OffreAgenceVoyage("Vienne", 123, new DateTime(2018, 08, 20, 08, 45, 00), new DateTime(2018, 08, 26, 08, 15, 00));
+            OffreAgenceVoyage voyage3 = new OffreAgenceVoyage("Bangkok", 123, new DateTime(2018, 08, 20, 08, 45, 00), new DateTime(2018, 08, 26, 08, 15, 00));
+            OffreAgenceVoyage voyage4 = new OffreAgenceVoyage("Rio", 123, new DateTime(2018, 08, 20, 08, 45, 00), new DateTime(2018, 08, 26, 08, 15, 00));
+
+            offreA.Add(voyage1);
+            offreA.Add(voyage2);
+            offreA.Add(voyage3);
+            offreA.Add(voyage4);
+  
+            for (int i = 0; i < offreA.Count; i++)
             {
-                var choix = AfficherMenu();
-                switch (choix)
+                Console.WriteLine($"({i})-{ offreA[i]} ");
+            }
+            Console.WriteLine("\nSelectionnez le numero de l'offre à ajouter");
+            var index = int.Parse(Console.ReadLine());
+
+            //offreA[index] =
+            //offreA.RemoveAt(index);
+
+            Console.ReadKey();
+
+        }
+
+        static IServiceContact service = new ServiceContact();
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("1.Gestion Client");
+            Console.WriteLine("2.Gestion Des Voyage");
+            Console.WriteLine("3.Quiter");
+            string saisie = Console.ReadLine();
+            if (saisie == "1")
+            {
+                bool continuer = true;
+                while (continuer)
                 {
-                    case "1":
-                        ListerContacts();
-                        break;
-                    case "2":
-                        AjouterContact();
-                        break;
-                    case "3":
-                        TrierContacts();
-                        break;
-                    case "4":
-                        //EcrireFicher();
-                        break;
-                    case "5":
-                        TrierContacts();
-                        break;
-                    case "6":
-                        RechercherContacts();
-                        break;
-                    case "7":
-                        RechercherContacts();
-                        break;
-                    case "8":
-                        RechercherContacts();
-                        break;
-                    case "8":
-                        RechercherContacts();
-                        break;
-                    case "q":
-                    case "Q":
-                        continuer = false;
-                        break;
-                    default:
-                        Console.WriteLine("Choix invalide, l'application va fermer...");
-                        continuer = false;
-                        break;
+                    var choix = AfficherMenu1();
+                    switch (choix)
+                    {
+                        case "1":
+                            ListerContacts();
+                            break;
+                        case "2":
+                            AjouterContact();
+                            break;
+                        case "3":
+                            TrierContacts();
+                            break;
+                        case "4":
+                            EcrireFichier();
+                            break;
+                        case "q":
+                        case "Q":
+                            continuer = false;
+                            break;
+                        default:
+                            Console.WriteLine("Choix invalide, l'application va fermer...");
+                            continuer = false;
+                            break;
+                    }
+                }
+            }
+            Console.WriteLine("1.Gestion Client");
+            Console.WriteLine("2.Gestion Des Voyage");
+            Console.WriteLine("3.Quiter");
+            if (saisie == "2")
+            {
+                bool continuer = true;
+                while (continuer)
+                {
+                    var choix = AfficherMenu1();
+                    switch (choix)
+                    {
+                        case "1":
+                         // SuiviPayerDossier();
+                            break;
+                        case "2":
+                           // ListerReservation();
+                            break;
+                        case "3":
+                            ListeOffres;
+                            break;
+                        case "4":
+                          //  SupprimerOffre();
+                            break;
+                        case "Q":
+                            continuer = false;
+                            break;
+                        default:
+                            Console.WriteLine("Choix invalide, l'application va fermer...");
+                            continuer = false;
+                            break;
+                    }
                 }
             }
         }
 
-        static string AfficherMenu()
+        static string AfficherMenu1()
         {
             Console.Clear();
-
             Console.WriteLine("MENU GESTION CLIENT\n");
             Console.WriteLine("1. Liste des client");
             Console.WriteLine("2. Ajout d’un client");
             Console.WriteLine("3. Trier contact par tranche d'age");
             Console.WriteLine("4. Entregistrer contact");
-            Console.WriteLine("MENU Gession Des Voyage\n");
-            Console.WriteLine("5. Suivi Dossier");
-            Console.WriteLine("6. CreerDosier");
-            Console.WriteLine("7. Liste des Offre");
-            Console.WriteLine("8. Supprimer des Offre");
-            Console.WriteLine("9. Calculer Assurance");
-            Console.ReadKey();
+            Console.WriteLine("Q. Quitter");
+            return Console.ReadLine();
+        }
+        static string AfficherMenu2()
+        {
+            Console.Clear();
+            Console.WriteLine("MENU Gestion Des Voyage\n");
+            Console.WriteLine("1. Suivi Dossier");
+            Console.WriteLine("2. CreerDosier");
+            Console.WriteLine("3. Liste des Offre");
+            Console.WriteLine("4. Supprimer des Offre");
+            Console.WriteLine("5. Calculer Assurance");
             Console.WriteLine("Q. Quitter");
             Console.Write("\nVotre choix: ");
-
             return Console.ReadLine();
         }
 
@@ -117,7 +180,7 @@ namespace BoVoyage
         static void TrierContacts()
         {
             OutilsConsole.AfficherMessage(
-                "Sur quel champ (1 pour le nom, 2 pour le prénom) ?",
+                "Saisir 1: Pour trache d'age plus 65 ans ou 2: pour trache d'age moin 18 ans ",
                 ConsoleColor.Yellow);
             var saisie = Console.ReadLine();
             byte tri;
@@ -127,7 +190,7 @@ namespace BoVoyage
                 OutilsConsole.AfficherMessageErreur("Choix inconnu. Recommence.");
                 saisie = Console.ReadLine();
             }
-
+            //public delegate (DateTime.Today-Contact.DateDeNaisance).Day>65) Predicate<T>  
             var tableau = new Dictionary<int, Func<IEnumerable<Contact>, IEnumerable<Contact>>>
             {
                 [1] = Contact.TrierParNom,
@@ -137,16 +200,6 @@ namespace BoVoyage
             IEnumerable<Contact> contactsTries = tableau[tri](service.GetContacts());
 
             AfficherListeContacts(contactsTries);
-
-            OutilsConsole.AfficherRetourMenu();
-        }
-
-        static void RechercherContacts()
-        {
-            OutilsConsole.AfficherMessage("Un début de nom ou prénom?", ConsoleColor.Yellow);
-            var saisie = Console.ReadLine();
-
-            AfficherListeContacts(service.ChercherContacts(saisie));
 
             OutilsConsole.AfficherRetourMenu();
         }
@@ -183,6 +236,47 @@ namespace BoVoyage
             Console.Write("{0,-6} | ", "NUMERO");
             Console.Write("{0,-10} | ", "NOM");
             Console.Write("{0,-10} | ", "PRENOM");
+            Console.WriteLine();
+            Console.WriteLine(new string('-', 35));
+
+            var listeContacts = service.GetContacts();
+
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            for (var i = 0; i < listeContacts.Count(); i++)
+            {
+                var contact = listeContacts.ElementAt(i);
+                Console.Write("{0,-6} | ", i);
+                Console.Write("{0,-10} | ", contact.Nom);
+                Console.Write("{0,-10} | ", contact.Prenom);
+                Console.WriteLine();
+            }
+            Console.ResetColor();
+
+            Console.Write("Entre le numéro du contact à supprimer: ");
+            var index = int.Parse(Console.ReadLine());
+
+            if (index < listeContacts.Count())
+            {
+                var contact = listeContacts.ElementAt(index);
+                service.SupprimerContact(contact);
+                OutilsConsole.AfficherMessage("Contact supprimé !", ConsoleColor.Green);
+            }
+            else
+            {
+                OutilsConsole.AfficherMessageErreur("Numéro invalide !");
+            }
+
+            OutilsConsole.AfficherRetourMenu();
+        }
+
+        static void SupprimerOffre()
+        {
+            Console.Clear();
+            Console.WriteLine("SUPPRESSION D'UN OFFRE\n");
+
+            Console.Write("{0,-6} | ", " ");
+            Console.Write("{0,-10} | ", "");
+            Console.Write("{0,-10} | ", " ");
             Console.WriteLine();
             Console.WriteLine(new string('-', 35));
 

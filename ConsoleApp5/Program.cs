@@ -12,9 +12,8 @@ namespace BoVoyage
         static List<Contact>  Contacts;
          static void Main(string[] args)
         {
-            Console.WriteLine("1.Gession Client");
-            Console.WriteLine("2.Gession Client");
-
+            Console.WriteLine("Gession Client");
+           
             bool continuer = true;
             while (continuer)
             {
@@ -28,12 +27,24 @@ namespace BoVoyage
                         AjouterContact();
                         break;
                     case "3":
-                        SupprimerContact();
-                        break;
-                    case "4":
                         TrierContacts();
                         break;
+                    case "4":
+                        //EcrireFicher();
+                        break;
                     case "5":
+                        TrierContacts();
+                        break;
+                    case "6":
+                        RechercherContacts();
+                        break;
+                    case "7":
+                        RechercherContacts();
+                        break;
+                    case "8":
+                        RechercherContacts();
+                        break;
+                    case "8":
                         RechercherContacts();
                         break;
                     case "q":
@@ -56,7 +67,14 @@ namespace BoVoyage
             Console.WriteLine("1. Liste des client");
             Console.WriteLine("2. Ajout d’un client");
             Console.WriteLine("3. Trier contact par tranche d'age");
-
+            Console.WriteLine("4. Entregistrer contact");
+            Console.WriteLine("MENU Gession Des Voyage\n");
+            Console.WriteLine("5. Suivi Dossier");
+            Console.WriteLine("6. CreerDosier");
+            Console.WriteLine("7. Liste des Offre");
+            Console.WriteLine("8. Supprimer des Offre");
+            Console.WriteLine("9. Calculer Assurance");
+            Console.ReadKey();
             Console.WriteLine("Q. Quitter");
             Console.Write("\nVotre choix: ");
 

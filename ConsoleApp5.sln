@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp5", "ConsoleApp5\ConsoleApp5.csproj", "{AF8A8DBD-C99B-480D-AB65-F7AA418048CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleVoyage", "ConsoleApp5\ConsoleVoyage.csproj", "{AF8A8DBD-C99B-480D-AB65-F7AA418048CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliothequeBoVoyage.Donne", "ClassLibrary1\BibliothequeBoVoyage.Donne.csproj", "{7B368F11-1A7F-46B1-A15C-42995C5FE2EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BibliothequeBoVoyage.Metier", "ClassLibrary2\BibliothequeBoVoyage.Metier.csproj", "{A8A4BD16-E5C8-42C6-9598-7E9C8CD89D90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{AF8A8DBD-C99B-480D-AB65-F7AA418048CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF8A8DBD-C99B-480D-AB65-F7AA418048CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF8A8DBD-C99B-480D-AB65-F7AA418048CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B368F11-1A7F-46B1-A15C-42995C5FE2EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B368F11-1A7F-46B1-A15C-42995C5FE2EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B368F11-1A7F-46B1-A15C-42995C5FE2EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B368F11-1A7F-46B1-A15C-42995C5FE2EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8A4BD16-E5C8-42C6-9598-7E9C8CD89D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A4BD16-E5C8-42C6-9598-7E9C8CD89D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A4BD16-E5C8-42C6-9598-7E9C8CD89D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A4BD16-E5C8-42C6-9598-7E9C8CD89D90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

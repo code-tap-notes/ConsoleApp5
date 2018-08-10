@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BibliothequeBoVoyage.Donne
+{
+    public class CampagneComercial:Contact 
+    {
+        List<Contact> contacs = new List<Contact>();
+    }
+}

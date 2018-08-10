@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BibliothequeBoVoyage.Donne
+namespace BoVoyage.DAL
 {
     public class OffreAgenceVoyage
     { 
@@ -14,7 +14,7 @@ namespace BibliothequeBoVoyage.Donne
         public DateTime DateDebut { get; set; }
         public DateTime DateRetour { get; set; }
         public string NumeroSequentiel{ get; set; }
-        public List<OffreDeVoyage> offreDeVoyages { get; set; }
+      
       
     }
     

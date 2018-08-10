@@ -4,9 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassLibrary2
+namespace BoVoyage.DAL
 {
-    public class Class1
+    public class OutilsGessionClient 
     {
+        public void ListerClient()
+        {
+
+        }
+
     }
 }

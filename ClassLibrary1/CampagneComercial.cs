@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BibliothequeBoVoyage.Donne
+namespace  BoVoyage.DAL
 {
     public class CampagneComercial:Contact 
     {
-        List<Contact> contacs = new List<Contact>();
+        public string numerosequentiel;
     }
 }

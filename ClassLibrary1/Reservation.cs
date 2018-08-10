@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BibliothequeBoVoyage.Donne
+namespace BoVoyage.DAL
 {
     public class Reservation
     {

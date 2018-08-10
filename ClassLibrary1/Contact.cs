@@ -1,19 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BibliothequeBoVoyage.Donne
+namespace BoVoyage.DAL
 {
     public class Contact
-    {
-        public string Civilite{ set; get; }
-        public string Nom { set; get; }
-        public string Prenom { set; get; }
-        public string Address { set; get; }
-        public string Email { set; get; }
-        public string Telephone { set; get; }
-        public DateTime DateDeNaissance { set; get; }
+    {public string Civilite { get; set; }
+        public string Nom { get; set; }
+        public string Prenom { get; set; }
+        public string Email { get; set; }
+        public string Telephone { get; set; }
+        public DateTime? DateNaissance { get; set; }
+        public string Addresse { get; set; }
+
+
+        public override string ToString()
+        {
+            return Nom + " " + Prenom;
+        }
+
+        public static IEnumerable<Contact> TrierParPrenom(IEnumerable<Contact> contacts)
+        {
+            return contacts.OrderBy(x => x.Prenom);
+        }
+
+        public static IEnumerable<Contact> TrierParNom(IEnumerable<Contact> contacts)
+        {
+            return contacts.OrderBy(x => x.Nom);
+        }
     }
 }
